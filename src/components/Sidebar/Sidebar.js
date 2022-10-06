@@ -21,6 +21,10 @@ const Sidebar = () => {
         navigate('/share');
     }
 
+    const logout = () => {
+        navigate('/login');
+    }
+
     return (
         <div style={styles.sidebarContainer}>
            <div style={styles.container}>
@@ -35,21 +39,21 @@ const Sidebar = () => {
                    </div>
                    <div style={{marginTop: 48}}>
                        <SidebarNavigator onClick={() => {
-                           console.log('Panel')
+                           console.log('Panel');
                        }} icon={DashboardIcon} titleRoute={'Panel de tickets'}/>
                    </div>
                    <div>
                        <SidebarNavigator onClick={() => {
-                           console.log('Facturacion')
+                           console.log('Facturacion');
                        }} icon={DocumentIcon} titleRoute={'Facturación'}/>
                    </div>
                </div>
                <div>
                    <SidebarNavigator onClick={() => {
-                       console.log('Ajustes')
+                       console.log('Ajustes');
                    }} icon={SettingsIcon} titleRoute={'Ajustes'}/>
                    <SidebarNavigator onClick={() => {
-                       console.log('Logout')
+                       logout();
                    }} icon={LogoutIcon} titleRoute={'Cerrar sesión'}/>
                </div>
            </div>
